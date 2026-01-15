@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           <h1 className="text-7xl md:text-[clamp(5.2rem,13vw,12.35rem)] font-display font-black leading-[0.85] tracking-[0.02em] mb-12 uppercase">
             Engineering <br />
             <span className="outline-text block py-4">The Future</span>
-            <span className="block text-center font-['Great_Vibes'] lowercase text-7xl md:text-8xl mt-2 mb-4">of</span>
+            <span className="block text-center font-['Mrs_Saint_Delafield'] lowercase text-7xl md:text-8xl mt-2 mb-4 tracking-wide">of</span>
             <span className="block pt-4">Intelligent</span>
             <span className="block pt-4">Application</span>
           </h1>
