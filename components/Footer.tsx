@@ -92,13 +92,12 @@ const Footer: React.FC<FooterProps> = ({
               <ul className="space-y-2 text-sm text-white/40">
                 <li>paraglobe.com</li>
                 <li>Vancouver, BC</li>
-                <li>Remote First</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-white/5 text-[10px] uppercase font-medium tracking-widest text-white/20">
+        <div className="flex flex-col md:flex-row justify-between md:justify-center items-center gap-8 md:gap-16 pt-8 border-t border-white/5 text-[10px] uppercase font-medium tracking-widest text-white/20">
           <p>© 2026 PARAGLOBE MEDIA INC. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8">
             <button onClick={onPrivacyClick} className="hover:text-white transition-colors">Privacy</button>
