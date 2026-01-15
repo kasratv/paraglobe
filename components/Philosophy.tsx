@@ -24,7 +24,7 @@ const Philosophy: React.FC = () => {
   }, []);
 
   return (
-    <section id="philosophy" ref={sectionRef} className="py-40 px-6 relative overflow-hidden">
+    <section id="philosophy" ref={sectionRef} className="min-h-screen bg-black/50 relative py-40 px-6 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className={`md:col-span-7 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>

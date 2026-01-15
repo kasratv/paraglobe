@@ -180,7 +180,7 @@ const AIVision: React.FC = () => {
   };
 
   return (
-    <section id="ai-vision" className="min-h-screen bg-black/50 relative py-32 px-6 border-t border-white/10">
+    <section id="ai-vision" ref={sectionRef} className="min-h-screen bg-black/50 relative py-32 px-6 border-t border-white/10">
       <EmailCaptureModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
