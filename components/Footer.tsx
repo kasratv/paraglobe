@@ -60,18 +60,6 @@ const Footer: React.FC<FooterProps> = ({
                 <li><a href="tel:+16046854726" className="hover:text-white transition-colors">604-685-4726</a></li>
               </ul>
 
-
-            </div>
-            <div className="contents md:block md:space-y-4">
-              <div className="space-y-4">
-                <h5 className="text-[10px] uppercase tracking-widest text-blue-600 font-bold">Network</h5>
-                <ul className="space-y-2 text-sm text-white/40">
-                  <li>paraglobe.com</li>
-                  <li>Vancouver, BC</li>
-                  <li>Remote First</li>
-                </ul>
-              </div>
-
               {/* Moved and Modified Logo */}
               <div className="origin-left scale-[0.8]">
                 <div className="flex items-center gap-3">
@@ -83,6 +71,7 @@ const Footer: React.FC<FooterProps> = ({
                         className="w-9 h-[31px] bg-white/40"
                         style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
                       ></div>
+
                       {/* i: Circle on Square */}
                       <div className="flex flex-col items-center gap-0 mb-0 -ml-[3mm]">
                         <div className="w-[17px] h-[17px] rounded-full bg-white/40"></div>
@@ -95,6 +84,16 @@ const Footer: React.FC<FooterProps> = ({
                   Paraglobe Media Inc. // The next generation of web and AI orchestration. Built for those who demand precision and visionary engineering.
                 </p>
               </div>
+
+
+            </div>
+            <div className="space-y-4">
+              <h5 className="text-[10px] uppercase tracking-widest text-blue-600 font-bold">Network</h5>
+              <ul className="space-y-2 text-sm text-white/40">
+                <li>paraglobe.com</li>
+                <li>Vancouver, BC</li>
+                <li>Remote First</li>
+              </ul>
             </div>
           </div>
         </div>
