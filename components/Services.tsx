@@ -47,7 +47,7 @@ const Services: React.FC = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-32 px-6 bg-[#080808]">
+    <section id="services" ref={sectionRef} className="min-h-screen bg-black/50 relative py-32 px-6 border-t border-white/10">
       <div className="max-w-[1400px] mx-auto">
         <div className={`grid grid-cols-1 md:grid-cols-12 mb-20 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <div className="md:col-span-6">
@@ -60,8 +60,8 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/10 border border-white/10">
           {services.map((service, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               style={{ transitionDelay: `${idx * 150}ms` }}
               className={`bg-[#080808] p-10 hover:bg-[#111] transition-all duration-700 group flex flex-col h-full transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
             >
