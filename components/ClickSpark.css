@@ -1,0 +1,113 @@
+.click-spark-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.spark-burst {
+    position: absolute;
+    pointer-events: none;
+}
+
+.spark-particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@keyframes spark-burst-0 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+@keyframes spark-burst-1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+@keyframes spark-burst-2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+@keyframes spark-burst-3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+@keyframes spark-burst-4 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+@keyframes spark-burst-5 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+@keyframes spark-burst-6 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+@keyframes spark-burst-7 {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) rotate(var(--rotation)) scale(var(--scale));
+        opacity: 0;
+    }
+}

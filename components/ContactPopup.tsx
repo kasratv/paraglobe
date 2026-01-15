@@ -28,7 +28,10 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
         setStatus('idle');
 
         try {
-            const { error } = await supabase
+            console.log('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+            console.log('Attempting to insert contact...');
+
+            const { data, error } = await supabase
                 .from('contacts')
                 .insert([
                     {
@@ -42,8 +45,12 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
                     }
                 ]);
 
-            if (error) throw error;
+            if (error) {
+                console.error('Supabase error:', error);
+                throw error;
+            }
 
+            console.log('Success! Data:', data);
             setStatus('success');
             setTimeout(() => {
                 onClose();

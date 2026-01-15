@@ -8,6 +8,8 @@ import AIVision from './components/AIVision';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ContactPopup from './components/ContactPopup';
+import ClickSpark from './components/ClickSpark';
+import FloatingLines from './components/FloatingLines';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -61,6 +63,7 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-blue-600 selection:text-white">
+
       <Navbar activeSection={activeSection} onConnectClick={() => setIsContactOpen(true)} />
 
       <main>
@@ -73,6 +76,21 @@ const App: React.FC = () => {
       <ScrollToTop />
       <Footer />
       <ContactPopup isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+
+      {/* Floating Lines Background */}
+      <FloatingLines
+        linesGradient={["#3B82F6", "#F4C300", "#E23D28"]}
+        topWavePosition={{ x: 10.0, y: 0.5, rotate: -0.4 }}
+        middleWavePosition={{ x: 5.0, y: 0.0, rotate: 0.2 }}
+        bottomWavePosition={{ x: 2.0, y: -0.7, rotate: 0.4 }}
+        animationSpeed={1}
+        interactive={false}
+        bendRadius={5}
+        bendStrength={-0.5}
+        mouseDamping={0.05}
+        parallax
+        parallaxStrength={0.2}
+      />
 
       {/* Background Ambience Elements */}
       <div className="fixed inset-0 pointer-events-none z-[-1] opacity-30">
