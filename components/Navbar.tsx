@@ -47,10 +47,12 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onConnectClick }) => {
               setIsMobileMenuOpen(false);
             }}
           >
-            <span className="outline-text font-['Baumans'] font-medium text-[44px] lowercase tracking-[0.029em] leading-none pt-1">
+            <span className="outline-text font-['Baumans'] font-medium text-[26.4px] md:text-[44px] lowercase tracking-[0.029em] leading-none pt-1">
               paraglobe
             </span>
-            <BauhausLogo />
+            <div className="scale-[0.6] md:scale-100 origin-left">
+              <BauhausLogo />
+            </div>
           </div>
 
           {/* Desktop Navigation */}
