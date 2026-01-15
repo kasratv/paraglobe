@@ -69,8 +69,8 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <h5 className="text-[10px] uppercase tracking-widest text-blue-600 font-bold">Inquiries</h5>
               <ul className="space-y-2 text-sm text-white/40">
-                <li>info@paraglobe.com</li>
-                <li>604-685-4726</li>
+                <li><a href="mailto:info@paraglobe.com" className="hover:text-white transition-colors">info@paraglobe.com</a></li>
+                <li><a href="tel:+16046854726" className="hover:text-white transition-colors">604-685-4726</a></li>
               </ul>
             </div>
             <div className="hidden md:block space-y-4">
