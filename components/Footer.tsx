@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ onConnectClick }) => {
                 <li><a href="#philosophy" className="hover:text-white">Philosophy</a></li>
                 <li><a href="#ai-vision" className="hover:text-white">AI Vision</a></li>
                 <li><a href="#services" className="hover:text-white">Services</a></li>
-                <li><button onClick={onConnectClick} className="hover:text-white text-left uppercase">Contact</button></li>
+                <li><button onClick={onConnectClick} className="hover:text-white text-left">contact</button></li>
               </ul>
             </div>
             <div className="space-y-4">

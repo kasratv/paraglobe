@@ -74,7 +74,7 @@ const App: React.FC = () => {
       </main>
 
       <ScrollToTop />
-      <Footer onConnectClick={() => setIsPopupOpen(true)} />
+      <Footer onConnectClick={() => setIsContactOpen(true)} />
       <ContactPopup isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {/* Floating Lines Background */}
