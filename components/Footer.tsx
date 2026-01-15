@@ -39,15 +39,7 @@ const Footer: React.FC<FooterProps> = ({
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
           <div className="md:col-span-6">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="outline-text font-['Baumans'] font-medium text-[26.4px] md:text-[44px] lowercase tracking-[0.029em] leading-none pt-1">paraglobe</span>
-              <div className="scale-[0.6] md:scale-100 origin-left">
-                <BauhausLogo />
-              </div>
-            </div>
-            <p className="text-white/40 text-sm max-w-sm mb-8">
-              Paraglobe Media Inc. // The next generation of web and AI orchestration. Built for those who demand precision and visionary engineering.
-            </p>
+            {/* Logo and description removed from here */}
           </div>
 
           <div className="md:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -67,20 +59,48 @@ const Footer: React.FC<FooterProps> = ({
                 <li><a href="mailto:info@paraglobe.com" className="hover:text-white transition-colors">info@paraglobe.com</a></li>
                 <li><a href="tel:+16046854726" className="hover:text-white transition-colors">604-685-4726</a></li>
               </ul>
+
+
             </div>
-            <div className="hidden md:block space-y-4">
-              <h5 className="text-[10px] uppercase tracking-widest text-blue-600 font-bold">Network</h5>
-              <ul className="space-y-2 text-sm text-white/40">
-                <li>paraglobe.com</li>
-                <li>Vancouver, BC</li>
-                <li>Remote First</li>
-              </ul>
+            <div className="contents md:block md:space-y-4">
+              <div className="space-y-4">
+                <h5 className="text-[10px] uppercase tracking-widest text-blue-600 font-bold">Network</h5>
+                <ul className="space-y-2 text-sm text-white/40">
+                  <li>paraglobe.com</li>
+                  <li>Vancouver, BC</li>
+                  <li>Remote First</li>
+                </ul>
+              </div>
+
+              {/* Moved and Modified Logo */}
+              <div className="origin-left scale-[0.8]">
+                <div className="flex items-center gap-3">
+                  <span className="font-['Baumans'] font-medium text-[26.4px] md:text-[44px] lowercase tracking-[0.029em] leading-none pt-1 text-white/40">paraglobe</span>
+                  <div className="scale-[0.6] md:scale-100 origin-left">
+                    <div className="flex items-end gap-2 -ml-[3mm] translate-y-[1mm]">
+                      {/* A: Triangle */}
+                      <div
+                        className="w-9 h-[31px] bg-white/40"
+                        style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
+                      ></div>
+                      {/* i: Circle on Square */}
+                      <div className="flex flex-col items-center gap-0 mb-0 -ml-[3mm]">
+                        <div className="w-[17px] h-[17px] rounded-full bg-white/40"></div>
+                        <div className="w-[17px] h-[17px] bg-white/40"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-white/40 text-sm max-w-sm mt-4">
+                  Paraglobe Media Inc. // The next generation of web and AI orchestration. Built for those who demand precision and visionary engineering.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-white/5 text-[10px] uppercase font-medium tracking-widest text-white/20">
-          <p>© 2025 PARAGLOBE MEDIA INC. ALL RIGHTS RESERVED.</p>
+          <p>© 2026 PARAGLOBE MEDIA INC. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8">
             <button onClick={onPrivacyClick} className="hover:text-white transition-colors">Privacy</button>
             <button onClick={onTermsClick} className="hover:text-white transition-colors">Terms</button>
