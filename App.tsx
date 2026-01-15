@@ -88,17 +88,17 @@ const App: React.FC = () => {
 
       {/* Floating Lines Background */}
       <FloatingLines
-        linesGradient={["#3B82F6", "#F4C300", "#E23D28"]}
+        linesGradient={["#0715ed", "#edc600", "#990512"]}
         topWavePosition={{ x: 10.0, y: 0.5, rotate: -0.4 }}
         middleWavePosition={{ x: 5.0, y: 0.0, rotate: 0.2 }}
         bottomWavePosition={{ x: 2.0, y: -0.7, rotate: 0.4 }}
         animationSpeed={1}
         interactive={false}
-        bendRadius={5}
-        bendStrength={-0.5}
-        mouseDamping={0.05}
-        parallax
-        parallaxStrength={0.2}
+        bendRadius={1}
+        bendStrength={-2}
+        mouseDamping={0}
+        parallax={false}
+        parallaxStrength={0}
       />
 
       {/* Background Ambience Elements */}
