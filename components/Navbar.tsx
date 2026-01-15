@@ -6,21 +6,21 @@ interface NavbarProps {
 }
 
 const BauhausLogo = () => (
-  <div className="flex items-end gap-2">
+  <div className="flex items-end gap-1.5">
     {/* A: Blue Equilateral Triangle 
-        Base: 36px, Height: ~31px (36 * 0.866) for equilateral 60deg angles 
+        Base: ~29px (was 36px), Height: ~25px
     */}
     <div
-      className="w-9 h-[31px] bauhaus-blue"
+      className="w-[29px] h-[25px] bauhaus-blue"
       style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
     ></div>
 
     {/* i: Yellow Circle on Red Square 
-        Size increased by ~40% (12px -> 17px)
+        Size reduced ~20% (17px -> 14px)
     */}
-    <div className="flex flex-col items-center gap-[3px] mb-0">
-      <div className="w-[17px] h-[17px] rounded-full bauhaus-yellow"></div>
-      <div className="w-[17px] h-[17px] bauhaus-red"></div>
+    <div className="flex flex-col items-center gap-[2px] mb-0">
+      <div className="w-[14px] h-[14px] rounded-full bauhaus-yellow"></div>
+      <div className="w-[14px] h-[14px] bauhaus-red"></div>
     </div>
   </div>
 );
@@ -39,15 +39,15 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onConnectClick }) => {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 h-20">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-4 sm:px-6 h-20">
           <div
-            className="flex items-center group cursor-pointer gap-3"
+            className="flex items-center group cursor-pointer gap-2.5"
             onClick={() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
               setIsMobileMenuOpen(false);
             }}
           >
-            <span className="outline-text font-['Baumans'] font-medium text-[44px] lowercase tracking-[0.029em] leading-none pt-1 ml-[5mm]">
+            <span className="outline-text font-['Baumans'] font-medium text-[35px] lowercase tracking-[0.029em] leading-none pt-1 ml-[1mm]">
               paraglobe
             </span>
             <BauhausLogo />
