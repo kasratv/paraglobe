@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
             <span className="text-white/40 text-[9px] font-bold tracking-[0.5em] uppercase">Advanced Application Design</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-[clamp(5.2rem,13vw,12.35rem)] font-display font-black leading-[0.85] tracking-[0.02em] mb-12 uppercase">
+          <h1 className="text-2xl sm:text-4xl md:text-[clamp(5.2rem,13vw,12.35rem)] font-display font-black leading-[0.85] tracking-[0.02em] mb-12 uppercase break-words w-full">
             Engineering <br />
             <span className="outline-text block py-4">The Future</span>
             Of Intelligent <br />
