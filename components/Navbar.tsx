@@ -18,7 +18,7 @@ const BauhausLogo = () => (
     {/* i: Yellow Circle on Red Square 
         Size increased by ~40% (12px -> 17px)
     */}
-    <div className="flex flex-col items-center gap-[3px] mb-0">
+    <div className="flex flex-col items-center gap-[3px] mb-0 -ml-[1mm]">
       <div className="w-[17px] h-[17px] rounded-full bauhaus-yellow"></div>
       <div className="w-[17px] h-[17px] bauhaus-red"></div>
     </div>
