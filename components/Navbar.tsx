@@ -6,7 +6,7 @@ interface NavbarProps {
 }
 
 const BauhausLogo = () => (
-  <div className="flex items-end gap-2 -ml-[2mm]">
+  <div className="flex items-end gap-2 -ml-[3mm] translate-y-[1mm]">
     {/* A: Blue Equilateral Triangle 
         Base: 36px, Height: ~31px (36 * 0.866) for equilateral 60deg angles 
     */}
