@@ -289,13 +289,8 @@ const AIVision: React.FC = () => {
 
               {vision && (
                 <div className="animate-fade-in">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-4">
-                      <span className="text-[10px] text-blue-500 font-mono">ARCHITECTURE_BLUEPRINT_001</span>
-                      <div className="h-[1px] w-12 bg-white/10" />
-                    </div>
-
-                    {/* Controls Group */}
+                  <div className="flex items-center mb-4">
+                    {/* Controls Group - Moved to Left */}
                     <div className="flex items-center gap-4">
                       {/* Zoom Controls */}
                       <div className="flex items-center gap-2">
