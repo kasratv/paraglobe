@@ -13,10 +13,10 @@ const Hero: React.FC = () => {
             <span className="text-white/40 text-[9px] font-bold tracking-[0.5em] uppercase">Advanced Application Design</span>
           </div>
 
-          <h1 className="text-[3.6rem] md:text-[clamp(5.2rem,13vw,12.35rem)] font-display font-black leading-[0.85] tracking-[0.02em] mb-12 uppercase">
+          <h1 className="text-[2.9rem] md:text-[clamp(5.2rem,13vw,12.35rem)] font-display font-black leading-[0.85] tracking-[0.02em] mb-12 uppercase">
             Engineering <br />
             <span className="outline-text block py-4">The Future</span>
-            <span className="block text-center font-['Mrs_Saint_Delafield'] lowercase text-7xl md:text-8xl mt-2 mb-4 tracking-wide">of</span>
+            <span className="block text-center font-['Mrs_Saint_Delafield'] lowercase text-6xl md:text-8xl mt-2 mb-4 tracking-wide">of</span>
             <span className="block pt-4">Intelligent</span>
             <span className="block pt-4">Application</span>
           </h1>
