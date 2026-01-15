@@ -26,12 +26,6 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ onConnectClick }) => {
-  const socialLinks = [
-    { name: 'X', url: '#' },
-    { name: 'LinkedIn', url: '#' },
-    { name: 'GitHub', url: 'https://github.com/kasratv/paraglobe' }
-  ];
-
   return (
     <footer className="py-20 px-6 bg-black border-t border-white/10">
       <div className="max-w-[1400px] mx-auto">
@@ -46,19 +40,6 @@ const Footer: React.FC<FooterProps> = ({ onConnectClick }) => {
             <p className="text-white/40 text-sm max-w-sm mb-8">
               Paraglobe Media Inc. // The next generation of web and AI orchestration. Built for those who demand precision and visionary engineering.
             </p>
-            <div className="flex gap-6">
-              {socialLinks.map(platform => (
-                <a
-                  key={platform.name}
-                  href={platform.url}
-                  target={platform.url.startsWith('http') ? "_blank" : undefined}
-                  rel={platform.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className="text-[10px] uppercase font-bold tracking-widest text-white/60 hover:text-white transition-colors"
-                >
-                  {platform.name}
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className="md:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-8">
