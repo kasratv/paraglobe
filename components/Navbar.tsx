@@ -1,8 +1,8 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 interface NavbarProps {
   activeSection: string;
+  onConnectClick: () => void;
 }
 
 const BauhausLogo = () => (
@@ -10,11 +10,11 @@ const BauhausLogo = () => (
     {/* A: Blue Equilateral Triangle 
         Base: 36px, Height: ~31px (36 * 0.866) for equilateral 60deg angles 
     */}
-    <div 
-      className="w-9 h-[31px] bauhaus-blue" 
+    <div
+      className="w-9 h-[31px] bauhaus-blue"
       style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
     ></div>
-    
+
     {/* i: Yellow Circle on Red Square 
         Size increased by ~40% (12px -> 17px)
     */}
@@ -25,7 +25,7 @@ const BauhausLogo = () => (
   </div>
 );
 
-const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
+const Navbar: React.FC<NavbarProps> = ({ activeSection, onConnectClick }) => {
   const navItems = [
     { label: 'Services', id: 'services' },
     { label: 'AI Vision', id: 'ai-vision' },
@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
       <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 h-20">
-        <div 
+        <div
           className="flex items-center group cursor-pointer gap-3"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
@@ -44,15 +44,14 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           </span>
           <BauhausLogo />
         </div>
-        
+
         <div className="hidden md:flex items-center gap-12 text-[10px] uppercase tracking-[0.3em] font-medium transition-all">
           {navItems.map((item) => (
-            <a 
+            <a
               key={item.id}
-              href={`#${item.id}`} 
-              className={`relative py-2 transition-colors duration-300 ${
-                activeSection === item.id ? 'text-white' : 'text-white/60 hover:text-white'
-              }`}
+              href={`#${item.id}`}
+              className={`relative py-2 transition-colors duration-300 ${activeSection === item.id ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
             >
               {item.label}
               {activeSection === item.id && (
@@ -62,15 +61,13 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           ))}
         </div>
 
-        <div>
-          <a 
-            href="https://github.com/kasratv/paraglobe"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="flex items-center gap-4">
+          <button
+            onClick={onConnectClick}
             className="inline-block px-6 py-2 bg-white text-black text-[10px] uppercase font-bold tracking-widest hover:bg-blue-600 hover:text-white transition-all cursor-pointer"
           >
             Connect
-          </a>
+          </button>
         </div>
       </div>
     </nav>

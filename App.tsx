@@ -6,9 +6,12 @@ import Services from './components/Services';
 import Philosophy from './components/Philosophy';
 import AIVision from './components/AIVision';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import ContactPopup from './components/ContactPopup';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     // Intersection Observer to detect current section
@@ -27,7 +30,7 @@ const App: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    
+
     const sections = ['hero', 'services', 'ai-vision', 'philosophy'];
     sections.forEach(id => {
       const el = document.getElementById(id);
@@ -49,7 +52,7 @@ const App: React.FC = () => {
     };
 
     window.addEventListener('click', handleAnchorClick);
-    
+
     return () => {
       window.removeEventListener('click', handleAnchorClick);
       observer.disconnect();
@@ -58,8 +61,8 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-blue-600 selection:text-white">
-      <Navbar activeSection={activeSection} />
-      
+      <Navbar activeSection={activeSection} onConnectClick={() => setIsContactOpen(true)} />
+
       <main>
         <Hero />
         <Services />
@@ -67,7 +70,9 @@ const App: React.FC = () => {
         <Philosophy />
       </main>
 
+      <ScrollToTop />
       <Footer />
+      <ContactPopup isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {/* Background Ambience Elements */}
       <div className="fixed inset-0 pointer-events-none z-[-1] opacity-30">
