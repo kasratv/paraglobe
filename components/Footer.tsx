@@ -56,8 +56,8 @@ const Footer: React.FC<FooterProps> = ({
               <ul className="space-y-2 text-sm text-white/40">
                 <li><a href="#hero" className="hover:text-white">Home</a></li>
                 <li><a href="#philosophy" className="hover:text-white">Philosophy</a></li>
-                <li><a href="#ai-vision" className="hover:text-white">AI Vision</a></li>
                 <li><a href="#services" className="hover:text-white">Services</a></li>
+                <li><a href="#ai-vision" className="hover:text-white">AI Vision</a></li>
                 <li><button onClick={onConnectClick} className="hover:text-white text-left">Contact</button></li>
               </ul>
             </div>

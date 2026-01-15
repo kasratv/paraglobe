@@ -30,8 +30,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onConnectClick }) => {
 
   const navItems = [
     { label: 'Philosophy', id: 'philosophy', hoverClass: 'hover:text-blue-600' },
-    { label: 'AI Vision', id: 'ai-vision', hoverClass: 'hover:text-[#F4C300]' },
     { label: 'Services', id: 'services', hoverClass: 'hover:text-[#E23D28]' },
+    { label: 'AI Vision', id: 'ai-vision', hoverClass: 'hover:text-[#F4C300]' },
   ];
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);

@@ -36,7 +36,7 @@ const App: React.FC = () => {
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
-    const sections = ['hero', 'philosophy', 'ai-vision', 'services'];
+    const sections = ['hero', 'philosophy', 'services', 'ai-vision'];
     sections.forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
@@ -72,8 +72,8 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Philosophy />
-        <AIVision />
         <Services />
+        <AIVision />
       </main>
 
       <ScrollToTop />
