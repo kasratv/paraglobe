@@ -397,7 +397,9 @@ export default function FloatingLines({
       uniforms.iResolution.value.set(canvasWidth, canvasHeight, 1);
     };
 
-    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(setSize) : null;
+    handleResize(); // Initial size set
+
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(handleResize) : null;
 
     if (ro && containerRef.current) {
       ro.observe(containerRef.current);
@@ -492,7 +494,7 @@ export default function FloatingLines({
   return (
     <div
       ref={containerRef}
-      className={`absolute inset-0 -z-10 ${className}`}
+      className={`absolute inset-0 -z-10`}
       style={{
         position: 'fixed',
         mixBlendMode: mixBlendMode
