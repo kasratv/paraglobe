@@ -64,6 +64,7 @@ const Footer: React.FC = () => {
                 <li><a href="#hero" className="hover:text-white">Home</a></li>
                 <li><a href="#services" className="hover:text-white">Services</a></li>
                 <li><a href="#philosophy" className="hover:text-white">Philosophy</a></li>
+                <li><a href="#ai-vision" className="hover:text-white">AI Vision</a></li>
               </ul>
             </div>
             <div className="space-y-4">
