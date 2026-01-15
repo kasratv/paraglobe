@@ -23,9 +23,17 @@ const BauhausLogo = () => (
 
 interface FooterProps {
   onConnectClick: () => void;
+  onPrivacyClick: () => void;
+  onTermsClick: () => void;
+  onCookiesClick: () => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ onConnectClick }) => {
+const Footer: React.FC<FooterProps> = ({
+  onConnectClick,
+  onPrivacyClick,
+  onTermsClick,
+  onCookiesClick
+}) => {
   return (
     <footer className="py-20 px-6 bg-black border-t border-white/10">
       <div className="max-w-[1400px] mx-auto">
@@ -74,9 +82,9 @@ const Footer: React.FC<FooterProps> = ({ onConnectClick }) => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-white/5 text-[10px] uppercase font-medium tracking-widest text-white/20">
           <p>© 2025 PARAGLOBE MEDIA INC. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Cookies</a>
+            <button onClick={onPrivacyClick} className="hover:text-white transition-colors">Privacy</button>
+            <button onClick={onTermsClick} className="hover:text-white transition-colors">Terms</button>
+            <button onClick={onCookiesClick} className="hover:text-white transition-colors">Cookies</button>
           </div>
         </div>
       </div>

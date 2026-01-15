@@ -11,9 +11,12 @@ import ContactPopup from './components/ContactPopup';
 import ClickSpark from './components/ClickSpark';
 import FloatingLines from './components/FloatingLines';
 
+import LegalOverlay from './components/LegalOverlay';
+
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [legalPage, setLegalPage] = useState<'privacy' | 'terms' | 'cookies' | null>(null);
 
   useEffect(() => {
     // Intersection Observer to detect current section
@@ -74,8 +77,14 @@ const App: React.FC = () => {
       </main>
 
       <ScrollToTop />
-      <Footer onConnectClick={() => setIsContactOpen(true)} />
+      <Footer
+        onConnectClick={() => setIsContactOpen(true)}
+        onPrivacyClick={() => setLegalPage('privacy')}
+        onTermsClick={() => setLegalPage('terms')}
+        onCookiesClick={() => setLegalPage('cookies')}
+      />
       <ContactPopup isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      <LegalOverlay type={legalPage} onClose={() => setLegalPage(null)} />
 
       {/* Floating Lines Background */}
       <FloatingLines
