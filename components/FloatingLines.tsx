@@ -392,6 +392,13 @@ export default function FloatingLines({
       camera.bottom = -1;
       camera.updateProjectionMatrix();
 
+      // Scale mesh to fit screen on wide displays (Desktop/Laptop)
+      if (aspect > 1) {
+        mesh.scale.x = aspect;
+      } else {
+        mesh.scale.x = 1;
+      }
+
       const canvasWidth = renderer.domElement.width;
       const canvasHeight = renderer.domElement.height;
       uniforms.iResolution.value.set(canvasWidth, canvasHeight, 1);
