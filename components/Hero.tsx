@@ -6,17 +6,18 @@ const Hero: React.FC = () => {
     <section id="hero" className="relative min-h-[90vh] flex items-center pt-32 px-6">
       <div className="absolute inset-0 grid-lines opacity-20 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 relative z-10 mb-[50px]">
+      <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 relative z-10 mb-[120px] md:mb-[50px]">
         <div className="md:col-span-10">
           <div className="mt-[1cm] mb-10 flex items-center gap-4">
             <div className="h-[1px] w-20 bg-blue-600" />
-            <span className="text-white/40 text-[9px] font-bold tracking-[0.5em] uppercase">Advanced Application Design & Architecture</span>
+            <span className="text-white/40 text-[9px] font-bold tracking-[0.5em] uppercase">Advanced Application Design</span>
           </div>
 
           <h1 className="text-7xl md:text-[clamp(5.2rem,13vw,12.35rem)] font-display font-black leading-[0.85] tracking-[0.02em] mb-12 uppercase">
             Engineering <br />
             <span className="outline-text block py-4">The Future</span>
-            Of Intelligence.
+            Of Intelligent <br />
+            Application
           </h1>
 
           <div className="grid grid-cols-1 gap-12 items-start">
@@ -38,7 +39,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-40 z-20">
+      <div className="absolute bottom-[calc(2rem-5mm)] md:bottom-10 inset-x-0 mx-auto w-fit flex flex-col items-center gap-4 animate-bounce opacity-40 z-20">
         <span className="text-[9px] uppercase tracking-[0.4em]">Explore</span>
         <div className="w-[1px] h-12 bg-white" />
       </div>
