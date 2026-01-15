@@ -1,18 +1,22 @@
 
 import React from 'react';
 
-const BauhausLogoSmall = () => (
-  <div className="flex items-end gap-1.5">
-    {/* A: Blue Equilateral Triangle (Scaled down) */}
-    <div 
-      className="w-5 h-[17px] bauhaus-blue" 
+const BauhausLogo = () => (
+  <div className="flex items-end gap-2 -ml-[3mm] translate-y-[1mm]">
+    {/* A: Blue Equilateral Triangle 
+        Base: 36px, Height: ~31px (36 * 0.866) for equilateral 60deg angles 
+    */}
+    <div
+      className="w-9 h-[31px] bauhaus-blue"
       style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
     ></div>
-    
-    {/* i: Yellow Circle on Red Square (Scaled down) */}
-    <div className="flex flex-col items-center gap-[1px]">
-      <div className="w-[10px] h-[10px] rounded-full bauhaus-yellow"></div>
-      <div className="w-[10px] h-[10px] bauhaus-red"></div>
+
+    {/* i: Yellow Circle on Red Square 
+        Size increased by ~40% (12px -> 17px)
+    */}
+    <div className="flex flex-col items-center gap-0 mb-0 -ml-[3mm]">
+      <div className="w-[17px] h-[17px] rounded-full bauhaus-yellow"></div>
+      <div className="w-[17px] h-[17px] bauhaus-red"></div>
     </div>
   </div>
 );
@@ -29,17 +33,19 @@ const Footer: React.FC = () => {
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
           <div className="md:col-span-6">
-             <div className="flex items-center gap-3 mb-8">
-              <span className="outline-text font-['Baumans'] font-medium text-4xl lowercase tracking-[0.029em] ml-[5mm]">paraglobe</span>
-              <BauhausLogoSmall />
+            <div className="flex items-center gap-3 mb-8">
+              <span className="outline-text font-['Baumans'] font-medium text-[26.4px] md:text-[44px] lowercase tracking-[0.029em] leading-none pt-1">paraglobe</span>
+              <div className="scale-[0.6] md:scale-100 origin-left">
+                <BauhausLogo />
+              </div>
             </div>
             <p className="text-white/40 text-sm max-w-sm mb-8">
               Paraglobe Media Inc. // The next generation of web and AI orchestration. Built for those who demand precision and visionary engineering.
             </p>
             <div className="flex gap-6">
               {socialLinks.map(platform => (
-                <a 
-                  key={platform.name} 
+                <a
+                  key={platform.name}
                   href={platform.url}
                   target={platform.url.startsWith('http') ? "_blank" : undefined}
                   rel={platform.url.startsWith('http') ? "noopener noreferrer" : undefined}
@@ -50,7 +56,7 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="md:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <h5 className="text-[10px] uppercase tracking-widest text-blue-600 font-bold">Studio</h5>
@@ -77,7 +83,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-white/5 text-[10px] uppercase font-medium tracking-widest text-white/20">
           <p>© 2025 PARAGLOBE MEDIA INC. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8">
