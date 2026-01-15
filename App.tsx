@@ -65,7 +65,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-black text-white selection:bg-blue-600 selection:text-white">
+    <div className="relative min-h-screen text-white selection:bg-blue-600 selection:text-white">
 
       <Navbar activeSection={activeSection} onConnectClick={() => setIsContactOpen(true)} />
 
@@ -89,9 +89,6 @@ const App: React.FC = () => {
       {/* Floating Lines Background */}
       <FloatingLines
         linesGradient={["#0715ed", "#edc600", "#990512"]}
-        topWavePosition={{ x: 10.0, y: 0.5, rotate: -0.4 }}
-        middleWavePosition={{ x: 5.0, y: 0.0, rotate: 0.2 }}
-        bottomWavePosition={{ x: 2.0, y: -0.7, rotate: 0.4 }}
         animationSpeed={1}
         interactive={false}
         bendRadius={1}
